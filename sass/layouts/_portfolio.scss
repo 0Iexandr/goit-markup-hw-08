@@ -4,11 +4,25 @@
 
 .portfolio__filter-btn-list {
     display: flex;
-    column-gap: 8px;
+    flex-direction: column;
+    row-gap: 8px;
     justify-content: center;
     align-items: center;
     margin: 0 0 50px 0;
     list-style: none;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        row-gap: 0;
+        column-gap: 8px;
+    }
+}
+
+.portfolio__filter-btn-wrapper {
+    display: flex;
+    column-gap: 8px;
+    justify-content: center;
+    align-items: center;
 }
 
 .portfolio__filter-btn {
@@ -35,11 +49,19 @@
 
 .portfolio__card-list {
     display: grid;
-    grid-template-columns: 370px 370px 370px;
+    grid-template-columns: 1fr;
     gap: 30px;
     justify-content: center;
     align-items: center;
     list-style: none;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .portfolio__card-link {
